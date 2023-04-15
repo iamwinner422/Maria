@@ -5,7 +5,7 @@ from gtts import gTTS
 import pygame
 import os
 # Récupération de la clé d'API auprès de OpenAI
-api_key = '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'
+api_key = 'VOTRE-CLE-API'
 
 # Définition de l'URL de l'API de ChatGPT
 # url = 'https://api.openai.com/v1/engines/davinci-codex/completions'
@@ -53,14 +53,14 @@ def chat(prompt):
 
     # Jouer l'audio avec pygame
     pygame.mixer.init()
-    pygame.mixer.music.load("D:/Maria/output.mp3")
+    pygame.mixer.music.load("C:/Maria/output.mp3")
     pygame.mixer.music.play()
     while pygame.mixer.music.get_busy():
         continue
 
     pygame.mixer.music.stop()
     pygame.mixer.quit()
-    os.remove("D:/Maria/output.mp3")
+    os.remove("C:/Maria/output.mp3")
 
 
 # Créer un objet recognizer pour la reconnaissance vocale
